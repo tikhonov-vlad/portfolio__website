@@ -1,0 +1,44 @@
+// Menu btn
+.menu__btn {
+  z-index: 100;
+  display: block;
+  width: 40px;
+  height: 36px;
+  position: relative;
+  span {
+    position: absolute;
+    font-weight: 700;
+    font-size: 1.2rem;
+    top: 50%; margin-top: -3px;
+    left: 50%; margin-left: -20px;
+    width: 40px;
+    height: 6px;
+    color: #ffffff;
+  }
+  span::before, span::after {
+    position: absolute;
+    top: 50%; margin-top: -3px;
+    left: 50%; margin-left: -20px;
+    width: 39px;
+    height: 6px;
+    background-color: #ffffff;
+  }
+}
+.menu__btn span::before,
+.menu__btn span::after {
+  content:'';
+  transition: 0.2s;
+}
+.menu__btn span::before {
+  transform: translateY(-13px);
+}
+.menu__btn span::after {
+  transform: translateY(20px);
+}
+
+.menu__btn_active span:before {
+  transform: rotate(45deg);
+}
+.menu__btn_active span:after {
+  transform: rotate(-45deg);
+}

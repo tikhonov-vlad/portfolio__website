@@ -1,0 +1,62 @@
+.form {
+  text-align: left;
+  padding: 0 4rem;
+  position: relative;
+  height: 30rem;
+  background: rgba(0, 0, 0, 0.5843);
+  &__close {
+    position: absolute;
+    top:2.3rem;
+    right: 2rem;
+    font-size: 5rem;
+    width: 5rem;
+    height: 5rem;
+    line-height: 5rem;
+    text-align: center;
+    background: transparent;
+    border: none;
+    &:hover {
+      cursor: pointer;
+      transform: rotate(90deg);
+      transition: 1.5s;
+    }
+  } 
+  &__arrow {
+    position: absolute;
+    bottom: 3.3rem;
+    right: 2rem;
+    button {
+      cursor: pointer;
+      background:none;
+      border:none;
+      img {
+        width: 41px;
+        height: 41px;
+        &:hover {
+          width: 43px;
+          height: 43px;
+        }
+      }
+    }
+  }
+  &__input {
+    display: flex;
+    flex-direction: column;
+    label {
+      margin-top: 5.5rem;
+      font-size: 2.8rem;
+    }
+    input {
+      outline: none;
+      border: none;
+      padding: 1rem 1rem 1rem 0;
+      border-bottom: 1px solid white;
+      background: rgba(0, 0, 0, 0);
+      width: 50%;
+      color: white;
+      font-size: 1.8rem;
+    }
+  }
+}
+
+

@@ -1,0 +1,35 @@
+.button {
+  cursor: pointer;
+  text-decoration: none;
+  text-transform: uppercase;
+  text-align: center;
+  width: 220px;
+  height: 65px;
+  line-height: 65px;
+  font-weight: 700;
+  font-size: 2.5rem;
+  margin: 0 auto;
+  position: relative;
+  &:hover svg rect{
+    stroke-width: 6;
+    stroke-dasharray: 100, 350;
+    stroke-dashoffset: 105;
+  }
+  svg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    rect {
+      stroke: white;
+      stroke-width: 3;
+      transition: 0.8s;
+      stroke-dasharray: 1000, 0;
+      animation: mobileBtn 3s infinite;
+    }
+  }
+}
+
+@keyframes mobileBtn{
+  from {stroke-dasharray: 10, 350}
+  to {stroke-dasharray: 50, 0}
+}
